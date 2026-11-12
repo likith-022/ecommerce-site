@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 const Header = () => {
   return (
     <header>
@@ -29,20 +30,20 @@ const Header = () => {
           <div className="collapse navbar-collapse" >
            
             <div className="navbar-nav mx-auto gap-lg-4 mt-3 mt-lg-0">
-              <p  className="nav-link fw-semibold">
+              <Link to="/"  className="nav-link fw-semibold">
                 <i className="bi bi-house-door me-2"></i>
                 Home
-              </p>
+              </Link>
 
               <p className="nav-link">
                 <i className="bi bi-grid-3x3-gap me-2"></i>
                 Collections
               </p>
 
-              <p className="nav-link">
+              <Link to="/about" className="nav-link">
                 <i className="bi bi-info-circle me-2"></i>
                 About
-              </p>
+              </Link>
             </div>
 
             <div className="d-flex align-items-center gap-3 mt-3 mt-lg-0">
