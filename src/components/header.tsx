@@ -2,8 +2,8 @@ const Header = () => {
   return (
     <header>
       <nav
-        className="navbar navbar-expand-lg py-3"
-        style={{ backgroundColor: "#e2e0dc" }}
+        className="navbar navbar-expand-lg py-3 bg-white"
+        
       >
         <div className="container">
           <div className="navbar-brand fw-bold fs-2"style={{ color: "#063423" }}>
