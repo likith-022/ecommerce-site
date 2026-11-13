@@ -3,10 +3,12 @@ import useSWR from "swr";
 import { getProducts } from "../services/product-service";
 import type { Product } from "../type/product-type";
 
-const useProducts = () => {
+const useProducts = (search:string) => {
   const { data, error, isLoading } = useSWR<Product[]>(
-    "allProducts",
-    () => getProducts()
+     search.trim()
+      ? ["allProducts", search.trim()]
+      : "allProducts",
+    () => getProducts(search)
   );
 
   return {

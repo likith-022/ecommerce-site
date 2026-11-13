@@ -11,18 +11,21 @@ import HomePage from "./pages/home-page";
 import AboutPage from "./pages/about-page";
 import ProductPage from "./pages/product-page";
 import ProductDetailsPage from "./pages/product-details-page";
-
+import { NuqsAdapter } from "nuqs/adapters/react-router/v7";
 createRoot(document.getElementById("root")!).render(
+  
   <StrictMode>
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/products" element={<ProductPage />} />
-        <Route path="/products/:id" element={<ProductDetailsPage />} />
-        <Route path="/about" element={<AboutPage />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+    <NuqsAdapter>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/products" element={<ProductPage />} />
+          <Route path="/products/:id" element={<ProductDetailsPage />} />
+          <Route path="/about" element={<AboutPage />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </NuqsAdapter>
   </StrictMode>,
 );

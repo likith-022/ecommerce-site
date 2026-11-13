@@ -1,14 +1,17 @@
 import { Link } from "react-router";
+import useCartStore from "../store/cart-store";
 const Header = () => {
+  const cart = useCartStore((state) => state.cart);
+
+  const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
   return (
     <header>
-      <nav
-        className="navbar navbar-expand-lg py-3 bg-white"
-        
-      >
+      <nav className="navbar navbar-expand-lg py-3 bg-white">
         <div className="container">
-          <div className="navbar-brand fw-bold fs-2"style={{ color: "#063423" }}>
-
+          <div
+            className="navbar-brand fw-bold fs-2"
+            style={{ color: "#063423" }}
+          >
             GLK<span style={{ color: "#c46c45" }}>.</span>
             <small
               className="d-block text-secondary"
@@ -27,10 +30,9 @@ const Header = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
 
-          <div className="collapse navbar-collapse" >
-           
+          <div className="collapse navbar-collapse">
             <div className="navbar-nav mx-auto gap-lg-4 mt-3 mt-lg-0">
-              <Link to="/"  className="nav-link fw-semibold">
+              <Link to="/" className="nav-link fw-semibold">
                 <i className="bi bi-house-door me-2"></i>
                 Home
               </Link>
@@ -46,20 +48,23 @@ const Header = () => {
               </Link>
             </div>
 
-            <div className="d-flex align-items-center gap-3 mt-3 mt-lg-0">
-              <p className="text-decoration-none fw-semibold"
+            <div className="d-flex align-items-center gap-3 ">
+              <p
+                className="text-decoration-none fw-semibold mb-0"
                 style={{ color: "#174b38" }}
               >
                 <i className="bi bi-person me-1"></i>
                 Login
               </p>
 
-              <p className="btn rounded-pill px-4 text-white"
+              <Link
+                to="/products?cart=true"
+                className="btn rounded-pill px-4 text-white"
                 style={{ backgroundColor: "#174b38" }}
               >
                 <i className="bi bi-bag me-2"></i>
-                Cart
-              </p>
+                Cart ({totalItems})
+              </Link>
             </div>
           </div>
         </div>

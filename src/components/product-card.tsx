@@ -3,9 +3,10 @@ import type { Product } from "../type/product-type";
 
 interface ProductCardProps {
   product: Product;
+  onAddToCart: (product: Product) => void;
 }
 
-const ProductCard = ({ product }: ProductCardProps) => {
+const ProductCard = ({ product, onAddToCart }: ProductCardProps) => {
   return (
     <div className="col-12 col-sm-6 col-lg-3">
       <div className="card h-100 border-0 shadow-sm">
@@ -36,6 +37,12 @@ const ProductCard = ({ product }: ProductCardProps) => {
           >
             Product Details
           </Link>
+          <button
+            className="btn btn-success w-100 mt-2"
+            onClick={() => onAddToCart(product)}
+          >
+            Add to Cart
+          </button>
         </div>
       </div>
     </div>
