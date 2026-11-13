@@ -9,6 +9,8 @@ import Header from "./components/header";
 import Footer from "./components/footer";
 import HomePage from "./pages/home-page";
 import AboutPage from "./pages/about-page";
+import ProductPage from "./pages/product-page";
+import ProductDetailsPage from "./pages/product-details-page";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -16,6 +18,8 @@ createRoot(document.getElementById("root")!).render(
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/products" element={<ProductPage />} />
+        <Route path="/products/:id" element={<ProductDetailsPage />} />
         <Route path="/about" element={<AboutPage />} />
       </Routes>
       <Footer />

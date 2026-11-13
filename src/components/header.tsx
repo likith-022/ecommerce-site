@@ -35,10 +35,10 @@ const Header = () => {
                 Home
               </Link>
 
-              <p className="nav-link">
+              <Link to="/products" className="nav-link">
                 <i className="bi bi-grid-3x3-gap me-2"></i>
                 Collections
-              </p>
+              </Link>
 
               <Link to="/about" className="nav-link">
                 <i className="bi bi-info-circle me-2"></i>

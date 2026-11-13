@@ -2,7 +2,7 @@
 function AboutPage() {
   return (
     <>
-      {/* About Hero Section */}
+      
       <section
         className="container-fluid p-0"
         style={{
@@ -22,7 +22,7 @@ function AboutPage() {
             </p>
 
             <h1 className="fw-bold display-4 mb-3">
-              About NOVA
+              About GLK
             </h1>
 
             <p className="fs-5">
@@ -31,7 +31,7 @@ function AboutPage() {
 
             <p className="text-white-50">
               We believe shopping should be simple,
-              enjoyable and inspiring. NOVA brings
+              enjoyable and inspiring. GLK brings
               together collections that make everyday
               living a little more special.
             </p>
@@ -51,7 +51,7 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* Our Story */}
+     
       <section className="container my-5 py-4">
         <div className="row align-items-center g-5">
           <div className="col-md-6">
@@ -83,7 +83,7 @@ function AboutPage() {
             </h2>
 
             <p className="text-muted">
-              NOVA was created with a simple idea:
+              GLK was created with a simple idea:
               make discovering and shopping for everyday
               products easier and more enjoyable.
             </p>
@@ -97,7 +97,7 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* Our Mission */}
+     
       <section
         className="py-5"
         style={{ backgroundColor: "#F5F8F5" }}
@@ -126,18 +126,18 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* Why Choose NOVA */}
+     
       <section className="container my-5 py-4">
         <div className="text-center mb-5">
           <p
             className="fw-semibold mb-2"
             style={{ color: "#47745E", letterSpacing: "2px" }}
           >
-            THE NOVA DIFFERENCE
+            THE GLK DIFFERENCE
           </p>
 
           <h2 className="fw-bold" style={{ color: "#164D3B" }}>
-            Why Choose NOVA?
+            Why Choose GLK?
           </h2>
         </div>
 
