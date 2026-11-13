@@ -12,8 +12,11 @@ import AboutPage from "./pages/about-page";
 import ProductPage from "./pages/product-page";
 import ProductDetailsPage from "./pages/product-details-page";
 import { NuqsAdapter } from "nuqs/adapters/react-router/v7";
+import LoginPage from "./pages/login-page";
+import CartPage from "./pages/cart-page";
+
 createRoot(document.getElementById("root")!).render(
-  
+
   <StrictMode>
     <NuqsAdapter>
       <BrowserRouter>
@@ -23,6 +26,8 @@ createRoot(document.getElementById("root")!).render(
           <Route path="/products" element={<ProductPage />} />
           <Route path="/products/:id" element={<ProductDetailsPage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/login" element={<LoginPage />} />
+             <Route path="/cart" element={<CartPage />} />
         </Routes>
         <Footer />
       </BrowserRouter>
