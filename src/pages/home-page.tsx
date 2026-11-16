@@ -224,6 +224,71 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+      <section className="py-5" style={{ backgroundColor: "#F5F8F5" }}>
+        <div className="container text-center py-4">
+          <p
+            className="fw-semibold mb-2"
+            style={{ color: "#47745E", letterSpacing: "2px" }}
+          >
+            WHAT DRIVES US
+          </p>
+
+          <h2 className="fw-bold mb-4" style={{ color: "#164D3B" }}>
+            Our Mission
+          </h2>
+
+          <p className="text-muted mx-auto" style={{ maxWidth: "750px" }}>
+            Our mission is to create a convenient shopping experience where
+            customers can explore quality products, discover new collections and
+            find things that suit their everyday needs.
+          </p>
+        </div>
+      </section>
+
+      <section className="container my-5 py-4">
+        <div className="text-center mb-5">
+          <p
+            className="fw-semibold mb-2"
+            style={{ color: "#47745E", letterSpacing: "2px" }}
+          >
+            THE GLK DIFFERENCE
+          </p>
+
+          <h2 className="fw-bold" style={{ color: "#164D3B" }}>
+            Why Choose GLK?
+          </h2>
+        </div>
+
+        <div className="row g-4">
+          <div className="col-md-4">
+            <div className="text-center p-4 h-100 border rounded-4">
+              <h5 style={{ color: "#164D3B" }}>Wide Collections</h5>
+              <p className="text-muted mb-0">
+                Explore fashion, beauty, furniture and electronics in one place.
+              </p>
+            </div>
+          </div>
+
+          <div className="col-md-4">
+            <div className="text-center p-4 h-100 border rounded-4">
+              <h5 style={{ color: "#164D3B" }}>Easy Shopping</h5>
+              <p className="text-muted mb-0">
+                Enjoy a simple and convenient way to discover your favourite
+                products.
+              </p>
+            </div>
+          </div>
+
+          <div className="col-md-4">
+            <div className="text-center p-4 h-100 border rounded-4">
+              <h5 style={{ color: "#164D3B" }}>Everyday Style</h5>
+              <p className="text-muted mb-0">
+                Find products that complement your lifestyle and everyday needs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

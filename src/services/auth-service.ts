@@ -23,3 +23,22 @@ export const loginUser = async (
 
   return data;
 };
+
+
+export const getCurrentUser = async (accessToken: string) => {
+  const response = await fetch("https://dummyjson.com/user/me", {
+    method: "GET",
+    headers: {
+      Authorization: `Bearer ${accessToken}`,
+    },
+  });
+
+  const data = await response.json();
+
+  if (!response.ok) {
+    throw new Error(data.message || "Failed to get user");
+  }
+
+  return data;
+};
+
