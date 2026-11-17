@@ -1,5 +1,5 @@
 
-
+import { useNavigate } from "react-router";
 import { useState } from "react";
 import { Form, Field, useForm } from "@formisch/react";
 import * as v from "valibot";
@@ -37,6 +37,7 @@ const LoginPage = () => {
   const loginForm = useForm({
     schema: LoginSchema,
   });
+  const navigate = useNavigate();
 
   const handleLogin = async (
     output: v.InferOutput<typeof LoginSchema>
@@ -44,6 +45,9 @@ const LoginPage = () => {
     try {
       setError("");
       await login(output.username, output.password);
+
+      alert ("successfully Logged In!");
+        navigate("/");
     } catch (err) {
       if (err instanceof Error) {
         setError(err.message);

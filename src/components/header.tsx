@@ -47,7 +47,10 @@ const Header = () => {
                 <i className="bi bi-grid-3x3-gap me-2"></i>
                 Collections
               </Link>
-
+              <Link to="/posts" className="nav-link">
+                <i className="bi bi-file-earmark-text me-2"></i>
+                Posts
+              </Link>
               <Link to="/about" className="nav-link">
                 <i className="bi bi-info-circle me-2"></i>
                 About
@@ -55,7 +58,6 @@ const Header = () => {
             </div>
 
             <div className="d-flex align-items-center gap-3 ">
-              
               {isLoggedIn ? (
                 <div className="dropdown">
                   <button

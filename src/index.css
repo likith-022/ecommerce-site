@@ -1,0 +1,10 @@
+
+.nav-link {
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+  background-color: #174b38;
+  color: #ffffff !important;
+  border-radius: 8px;
+}
